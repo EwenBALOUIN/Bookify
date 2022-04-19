@@ -1,12 +1,12 @@
-import { View } from 'react-native';
-import Input from './../components/input'
-import Button from './../components/button'
-import Logo from './../components/logo'
+import { View, StyleSheet } from 'react-native';
+import Input from '../components/Input'
+import Button from '../components/Button'
+import Logo from '../components/Logo'
 
 export default () => {
   return (
-      <View >
-        <Logo />
+      <View style={styles.contentView}>
+        <Logo width="185" height="185"/>
         <Input placeholder="Login" />
         <Input placeholder="Password"/>
         <Button label="Login" />
@@ -14,3 +14,10 @@ export default () => {
   );
 
 }
+const styles = StyleSheet.create({
+  contentView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})

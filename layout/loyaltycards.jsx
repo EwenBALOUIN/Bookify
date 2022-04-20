@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   contentView: {
     flex: 1,
     flexDirection: 'column',
-    marginTop: '10%',
+    paddingTop: '10%',
+    backgroundColor: 'white',
   },
 });

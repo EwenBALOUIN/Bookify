@@ -1,4 +1,5 @@
 import { Input } from '@rneui/themed';
 
-
-export default (props) =>{ return(<Input placeholder={props.placeholder} secureTextEntry={true} />)} 
+export default (props) => {
+  return <Input placeholder={props.placeholder} secureTextEntry={true} />;
+};

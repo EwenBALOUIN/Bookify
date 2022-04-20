@@ -1,23 +1,20 @@
 import { View, StyleSheet } from 'react-native';
-import Title from '../container/title';
-import Footer from '../container/footer';
-import { Text } from '@rneui/themed';
+import Logo from '../components/Logo';
+import Label from '../components/Label';
 
 export default () => {
   return (
-      <View style={styles.contentView}>
-        <Title/>
-        <Text h2> Nicolas B est votre prochain client</Text>
-        <Footer/>
-      </View>
+    <View style={styles.contentView}>
+      <Logo width="18" height="18" />
+      <Label />
+    </View>
   );
-
-}
+};
 const styles = StyleSheet.create({
   contentView: {
     flex: 1,
-    flexDirection: "column",
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
-})
+});

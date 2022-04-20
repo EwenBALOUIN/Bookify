@@ -4,11 +4,10 @@ import { StyleSheet } from 'react-native';
 
 export default (props) =>{ 
   const { theme } = useTheme();
-
+  
   return(<Text
   style={styles.text}
-  h1
-  h1Style={{ color:  theme.colors.primary }}> Heading 1
+  h1Style={{ color:  theme.colors.primary }}> {props.text}
   </Text>)}
 
 const styles = StyleSheet.create({

@@ -2,11 +2,11 @@ import { View, StyleSheet } from 'react-native';
 import Logo from '../components/Logo';
 import { Text } from '@rneui/themed';
 
-export default () => {
+export default (props) => {
   return (
     <View style={styles.contentView}>
       <Logo width="32px" height="32px" viewBox="0 0 185 185" />
-      <Text style={styles.titleText}>Vos rendez-vous</Text>
+      <Text style={styles.titleText}>{props.text}</Text>
     </View>
   );
 };

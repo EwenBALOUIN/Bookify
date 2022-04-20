@@ -4,7 +4,7 @@ import Title from './../container/title';
 export default () => {
   return (
     <View style={styles.contentView}>
-      <Title />
+      <Title text="Vos clients" />
     </View>
   );
 };

@@ -24,14 +24,15 @@ export default () => {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             if (route.name === 'Calendar') {
-              return <IconFa name="calendar" size={30} color={'black'} />;
+              return <IconFa name="calendar" size={30} color={'#ffffff'} />;
             } else if (route.name === 'Users') {
-              return <IconFeather name="users" size={30} color={'black'} />;
+              return <IconFeather name="users" size={30} color={'#ffffff'} />;
             }
           },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray',
           headerShown: false,
+          tabBarActiveBackgroundColor: '#6c0263',
+          tabBarInactiveBackgroundColor: '#6c0263',
+          tabBarShowLabel: false,
         })}
       >
         <Tab.Screen name="Calendar" component={CalendarScreen} />

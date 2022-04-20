@@ -1,12 +1,14 @@
 import { View, StyleSheet } from 'react-native';
-import Logo from '../components/Logo';
-import Label from '../components/Label';
+import Title from '../container/title';
+import Footer from '../container/footer';
+import { Text } from '@rneui/themed';
 
 export default () => {
   return (
     <View style={styles.contentView}>
-      <Logo width="18" height="18" />
-      <Label />
+      <Title />
+      <Text h2> Nicolas B est votre prochain client</Text>
+      <Footer />
     </View>
   );
 };

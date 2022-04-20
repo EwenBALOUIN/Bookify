@@ -12,8 +12,8 @@ export default function App() {
       <View style={{ flex: 1 }}>
         {/* <Login /> */}
         {/* <Signup/> */}
-        {/*<Calendar/>*/}
-        <LoyaltyCards />
+        <Calendar />
+        {/* <LoyaltyCards /> */}
       </View>
     </ThemeProvider>
   );

@@ -6,7 +6,6 @@ export default (props) => {
 
   return (
     <Text style={styles.text} h1Style={{ color: theme.colors.primary }}>
-      {' '}
       {props.text}
     </Text>
   );

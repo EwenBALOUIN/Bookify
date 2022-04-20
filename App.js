@@ -9,9 +9,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <View style={styles.container}>
-        <Login />
+        {/* <Login /> */}
         {/* <Signup/> */}
-        {/* <Calendar/> */}
+        <Calendar />
       </View>
     </ThemeProvider>
   );

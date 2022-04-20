@@ -6,17 +6,15 @@ import { Text } from '@rneui/themed';
 export default () => {
   return (
     <View style={styles.contentView}>
-      <Title />
-      <Text h2> Nicolas B est votre prochain client</Text>
+      {/* <Title />
+      <Text h2> Nicolas B est votre prochain client</Text> */}
       <Footer />
     </View>
   );
 };
 const styles = StyleSheet.create({
   contentView: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: 'flex',
+    width: '100%',
   },
 });

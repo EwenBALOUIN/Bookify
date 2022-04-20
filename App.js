@@ -13,7 +13,7 @@ export default function App() {
         {/* <Login /> */}
         {/* <Signup/> */}
         {/*<Calendar />*/}
-         <LoyaltyCards />
+        <LoyaltyCards />
       </View>
     </ThemeProvider>
   );

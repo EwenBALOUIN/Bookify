@@ -1,10 +1,12 @@
 import { View, StyleSheet } from 'react-native';
 import Title from './../container/title';
+import SearchBar from './../components/SearchBar'
 
 export default () => {
   return (
     <View style={styles.contentView}>
       <Title text="Vos clients" />
+      <SearchBar/>
     </View>
   );
 };

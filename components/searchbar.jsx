@@ -57,19 +57,18 @@ export default SearchBar;
 const styles = StyleSheet.create({
 	container: {
 		margin: 15,
-		justifyContent: "flex-start",
-		alignItems: "center",
-		flexDirection: "row",
-		width: "90%",
+		alignSelf:"center",
+		width: "50%",
 
 	},
 	searchBar__unclicked: {
 		padding: 10,
 		flexDirection: "row",
 		width: "95%",
-		backgroundColor: "#D9DBDA",
+		backgroundColor: "#FFFFFF",
 		borderRadius: 15,
 		alignItems: "center",
+		boxShadow: "1px 3px 10px #9E9E9E"
 	},
 	searchBar__clicked: {
 		padding: 10,

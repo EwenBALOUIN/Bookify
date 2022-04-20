@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     color: '#393E40',
-    paddingLeft: 5,
+    paddingLeft: 15,
     includeFontPadding: true,
   },
 });

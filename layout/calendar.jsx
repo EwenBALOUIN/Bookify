@@ -5,14 +5,14 @@ import IconFa from 'react-native-vector-icons/FontAwesome';
 import IconFeather from 'react-native-vector-icons/Feather';
 
 import Login from './login';
-import Signup from './signup';
+import LoyaltyCard from './loyaltycards';
 
 const CalendarScreen = () => {
   return <Login />;
 };
 
 const CustomerScreen = () => {
-  return <Signup />;
+  return <LoyaltyCard />;
 };
 
 const Tab = createBottomTabNavigator();

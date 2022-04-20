@@ -9,7 +9,7 @@ import theme from './styles/theme';
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
+      <View style={{ flex: 1 }}>
         {/* <Login /> */}
         {/* <Signup/> */}
         {/*<Calendar/>*/}
@@ -18,12 +18,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

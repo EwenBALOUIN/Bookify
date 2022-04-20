@@ -1,55 +1,27 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import IconFA from 'react-native-vector-icons/FontAwesome';
-import IconFeather from 'react-native-vector-icons/Feather';
-import { Tab, Text, TabView } from '@rneui/themed';
-import Login from './../layout/login';
-import SignUp from './../layout/signup';
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Login from '../layout/login';
+import Signup from '../layout/signup';
 
-const iconFa = <IconFA name="calendar" size={30} color="#FFFFFF" />;
-const iconFeather = <IconFeather name="users" size={30} color="#FFFFFF" />;
+function HomeScreen() {
+  return <Login />;
+}
 
-export default () => {
-  const [index, setIndex] = React.useState(0);
+function SettingsScreen() {
+  return <Signup />;
+}
 
+const Tab = createBottomTabNavigator();
+
+export default function App() {
   return (
-    <View style={styles.container}>
-      <Tab
-        value={index}
-        onChange={(e) => setIndex(e)}
-        indicatorStyle={{
-          backgroundColor: 'white',
-          height: 3,
-        }}
-        variant="primary"
-      >
-        <Tab.Item
-          title="Login"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          title="SignUp"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
-        />
-      </Tab>
-
-      <TabView value={index} onChange={setIndex} animationType="spring">
-        <TabView.Item>
-          <Login />
-        </TabView.Item>
-        <TabView.Item>
-          <SignUp />
-        </TabView.Item>
-      </TabView>
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    bottom: 0,
-    flexDirection: 'column',
-  },
-});
+}

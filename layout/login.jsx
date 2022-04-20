@@ -5,7 +5,10 @@ import Logo from '../components/Logo';
 
 export default () => {
   return (
-    <View style={styles.contentView}>
+    <View
+      View
+      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}
+    >
       <Logo width="185" height="185" viewBox="0 0 185 185" />
       <Input placeholder="Email" secure={false} />
       <Input placeholder="Password" secure />
@@ -13,10 +16,3 @@ export default () => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  contentView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

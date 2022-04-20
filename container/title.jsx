@@ -4,10 +4,10 @@ import { Text } from '@rneui/themed';
 
 export default () => {
   return (
-    <View style={styles.contentView}>
-      <Logo width="20%" height="20%" viewBox="0 0 185 185" />
-      <Text h1> Vos rendez-vous</Text>
-    </View>
+      <View style={styles.contentView}>
+        <Logo width="20%" height="20%" viewBox="0 0 185 185" />
+        <Text style={styles.titleText}>  Vos rendez-vous</Text>
+      </View>
   );
 };
 const styles = StyleSheet.create({
@@ -17,4 +17,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-});
+  titleText: {
+    flex: 1,
+    fontSize: '1.6em',
+    fontWeight : 'bold'
+    
+  },
+})

@@ -1,6 +1,5 @@
 import { View, StyleSheet } from 'react-native';
 import Title from './../container/title';
-import SearchBar from './../components/searchbar';
 
 export default () => {
   return (

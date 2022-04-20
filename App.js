@@ -2,26 +2,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './layout/login';
 import Signup from './layout/signup';
 import Calendar from './layout/calendar';
+import LoyaltyCards from './layout/loyaltycards';
 import { ThemeProvider } from '@rneui/themed';
 import theme from './styles/theme';
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Login />
+      <View style={{ flex: 1 }}>
+        {/* <Login /> */}
         {/* <Signup/> */}
-        {/* <Calendar/> */}
+        {/*<Calendar />*/}
+         <LoyaltyCards />
       </View>
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

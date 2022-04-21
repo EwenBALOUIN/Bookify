@@ -1,20 +1,20 @@
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Login from './layout/login';
-import Signup from './layout/signup';
-import Calendar from './layout/calendar';
-import LoyaltyCards from './layout/loyaltycards';
-import { ThemeProvider } from '@rneui/themed';
-import theme from './styles/theme';
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <View style={{ flex: 1 }}>
-        {/* <Login /> */}
-        {/* <Signup/> */}
-        {/*<Calendar />*/}
-        <LoyaltyCards />
-      </View>
-    </ThemeProvider>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

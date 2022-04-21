@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './layout/login';
 import Signup from './layout/signup';
 import Calendar from './layout/calendar';
+import Modal from './container/modal';
 import LoyaltyCards from './layout/loyaltycards';
 import { ThemeProvider } from '@rneui/themed';
 import theme from './styles/theme';
@@ -13,7 +14,7 @@ export default function App() {
         {/* <Login /> */}
         {/* <Signup/> */}
         {/*<Calendar />*/}
-        <LoyaltyCards />
+        <Modal />
       </View>
     </ThemeProvider>
   );

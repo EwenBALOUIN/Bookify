@@ -6,6 +6,7 @@ export default (props) => {
 
   return (
     <Button
+      {...props}
       title={props.label}
       titleStyle={{
         fontWeight: '700',

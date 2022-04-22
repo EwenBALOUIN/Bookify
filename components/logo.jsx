@@ -1,5 +1,4 @@
 import Svg, { Path } from 'react-native-svg';
-import { View } from 'react-native';
 
 const Logo = (props) => (
   <Svg width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg" {...props}>

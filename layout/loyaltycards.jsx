@@ -3,15 +3,17 @@ import Title from './../container/title';
 import { LinearGradient } from 'expo-linear-gradient';
 import SearchBar from './../components/Searchbar';
 import { Text } from '@rneui/themed';
+import { useTheme } from '@rneui/themed';
 
 export default () => {
+  const { theme } = useTheme();
   return (
     <View style={styles.contentView}>
       <Title text="Vos clients" />
       <SearchBar />
       <ScrollView>
         <LinearGradient
-          colors={['#6C0263', '#6c02639d']}
+          colors={[theme.colors.primary, theme.colors.primaryGradient]}
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
@@ -20,7 +22,7 @@ export default () => {
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
-          colors={['#6C0263', '#6c02639d']}
+          colors={[theme.colors.primary, theme.colors.primaryGradient]}
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
@@ -29,7 +31,7 @@ export default () => {
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
-          colors={['#6C0263', '#6c02639d']}
+          colors={[theme.colors.primary, theme.colors.primaryGradient]}
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
@@ -38,7 +40,7 @@ export default () => {
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
-          colors={['#6C0263', '#6c02639d']}
+          colors={[theme.colors.primary, theme.colors.primaryGradient]}
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
@@ -47,7 +49,7 @@ export default () => {
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
-          colors={['#6C0263', '#6c02639d']}
+          colors={[theme.colors.primary, theme.colors.primaryGradient]}
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >

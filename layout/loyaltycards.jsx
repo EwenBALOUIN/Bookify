@@ -15,7 +15,8 @@ export default () => {
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
-          <Text style={styles.nameText}>Guillaume Charpentier</Text>
+          <Text style={styles.nameText}>Guillaume</Text>
+          <Text style={styles.nameText}>Charpentier</Text>
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
@@ -23,7 +24,8 @@ export default () => {
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
-          <Text style={styles.nameText}>Guillaume Charpentier</Text>
+          <Text style={styles.nameText}>Guillaume</Text>
+          <Text style={styles.nameText}>Charpentier</Text>
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
@@ -31,7 +33,8 @@ export default () => {
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
-          <Text style={styles.nameText}>Guillaume Charpentier</Text>
+          <Text style={styles.nameText}>Guillaume</Text>
+          <Text style={styles.nameText}>Charpentier</Text>
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
         <LinearGradient
@@ -39,7 +42,17 @@ export default () => {
           stop={{ x: 0.1, y: 0.01 }}
           style={styles.card}
         >
-          <Text style={styles.nameText}>Guillaume Charpentier</Text>
+          <Text style={styles.nameText}>Guillaume</Text>
+          <Text style={styles.nameText}>Charpentier</Text>
+          <Text style={styles.pointText}>116 Pts</Text>
+        </LinearGradient>
+        <LinearGradient
+          colors={['#6C0263', '#6c02639d']}
+          stop={{ x: 0.1, y: 0.01 }}
+          style={styles.card}
+        >
+          <Text style={styles.nameText}>Guillaume</Text>
+          <Text style={styles.nameText}>Charpentier</Text>
           <Text style={styles.pointText}>116 Pts</Text>
         </LinearGradient>
       </ScrollView>
@@ -67,11 +80,17 @@ const styles = StyleSheet.create({
     padding: '5%',
   },
   pointText: {
-    paddingTop: '30%',
+    fontFamily: 'Poppins_700Bold',
+    paddingTop: '20%',
     paddingLeft: '75%',
     color: '#ffffff',
+    fontSize: 15,
+    fontWeight: 'bold',
   },
   nameText: {
+    fontFamily: 'Poppins_700Bold',
     color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });

@@ -6,7 +6,6 @@ export default (props) => {
 
   return (
     <Text style={styles.text} h1Style={{ color: theme.colors.primary }}>
-      {' '}
       {props.text}
     </Text>
   );
@@ -16,5 +15,6 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     padding: 5,
+    fontFamily: 'Poppins_700Bold',
   },
 });

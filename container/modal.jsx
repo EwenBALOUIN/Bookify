@@ -9,7 +9,7 @@ export default () => {
     <View style={styles.contentView}>
       <View style={styles.inputView}>
         <IconFeather name="users" size={24} style={styles.iconStyle} />
-        <Input placeholder="Nom" secure={false} containerStyle={styles.input} />
+        <Input placeholder="Name" secure={false} containerStyle={styles.input} />
       </View>
       <View style={styles.inputView}>
         <IconFa name="calendar" size={24} style={styles.iconStyle} />

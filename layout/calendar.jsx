@@ -6,13 +6,14 @@ import IconFeather from 'react-native-vector-icons/Feather';
 
 import Login from './login';
 import LoyaltyCard from './loyaltycards';
+import Customer from './customer';
 
 const CalendarScreen = () => {
   return <Login />;
 };
 
 const CustomerScreen = () => {
-  return <LoyaltyCard />;
+  return <Customer />;
 };
 
 const Tab = createBottomTabNavigator();

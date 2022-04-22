@@ -8,6 +8,8 @@ import { ThemeProvider } from '@rneui/themed';
 import theme from './styles/theme';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -19,14 +21,14 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <View style={{ flex: 1 }}>
+    <ThemeProvider theme={theme} style={{ flex: 1 }}>
+      <SafeAreaProvider style={{ flex: 1 }}>
         {/* <Login /> */}
         {/* <Signup/> */}
         <Calendar />
         {/* <Modal /> */}
         {/* <LoyaltyCards /> */}
-      </View>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }

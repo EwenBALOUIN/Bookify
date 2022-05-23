@@ -12,6 +12,7 @@ import { useFonts, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 
 export default function App() {
   let [fontsLoaded] = useFonts({

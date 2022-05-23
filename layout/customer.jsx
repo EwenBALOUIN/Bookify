@@ -1,6 +1,6 @@
 import { View, StyleSheet, ScrollView, TouchableHighlight, Text } from 'react-native';
 import { useState } from 'react';
-import Title from '../container/title';
+import Title from './../container/title';
 import Modal from './../container/modal';
 import DeleteButton from './../components/DeleteButton';
 import PlusButton from './../components/PlusButton';

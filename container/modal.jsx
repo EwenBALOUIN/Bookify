@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import Input from '../components/Input';
+import Input from './../components/Input';
 import IconFa from 'react-native-vector-icons/FontAwesome';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconOcticons from 'react-native-vector-icons/Octicons';

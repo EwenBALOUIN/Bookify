@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
-import Logo from '../components/Logo';
+import Logo from './../components/Logo';
 import { Text, useTheme } from '@rneui/themed';
-import theme from '../styles/theme';
+import theme from './../styles/theme';
 
 export default (props) => {
   const { theme } = useTheme();

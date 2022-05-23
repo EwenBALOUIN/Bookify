@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
-import Input from '../components/Input';
-import Button from '../components/Button';
-import Logo from '../components/Logo';
+import Input from './../components/Input';
+import Button from './../components/Button';
+import Logo from './../components/Logo';
 import { useNavigation } from '@react-navigation/native';
 
 export default () => {

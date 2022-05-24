@@ -11,12 +11,15 @@ export default ({ clicked }) => {
   const { theme } = useTheme();
   const navigation = useNavigation();
   const [search, setSearch] = useState('');
+  const [customerState, setCustomerState] = useState([]);
 
   const updateSearch = (search) => {
-    const customer = customers.filter(
-      (customer) => customer.firstName == search || customer.lastName == search
+    setCustomerState(
+      customers.filter(
+        (customer) => customer.firstName.includes(search) || customer.lastName.includes(search)
+      )
     );
-    setSearch(customer);
+    setSearch(search);
   };
 
   return (
@@ -57,13 +60,13 @@ export default ({ clicked }) => {
         rightIconContainerStyle={{}}
         loadingProps={{}}
         onChangeText={updateSearch}
+        value={search}
         onClearText={() => console.log(onClearText())}
         placeholder=""
         placeholderTextColor="#888"
         cancelButtonTitle="Cancel"
         cancelButtonProps={{}}
         onCancel={() => console.log(onCancel())}
-        value={search}
       />
 
       <ScrollView>
@@ -85,7 +88,7 @@ export default ({ clicked }) => {
             </Pressable>
           ))}
         {search.length > 0 &&
-          search.map((customer) => (
+          customerState.map((customer) => (
             <Pressable
               key={customer.id}
               onPress={() => navigation.navigate('Customer', { params: { user: customer.id } })}

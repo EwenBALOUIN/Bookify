@@ -8,7 +8,10 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@expo-google-fonts/poppins": "^0.2.2",
+    "@expo/ngrok": "^2.5.0",
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.1",
@@ -23,10 +26,11 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-calendars": "^1.1284.0",
+    "react-native-gesture-handler": "~2.1.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-svg": "^12.3.0",
-    "react-native-web": "0.17.1",
-    "react-native-gesture-handler": "~2.1.0"
+    "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

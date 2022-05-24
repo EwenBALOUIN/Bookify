@@ -1,62 +1,106 @@
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, Pressable } from 'react-native';
 import Title from './../container/title';
 import { LinearGradient } from 'expo-linear-gradient';
-import SearchBar from './../components/Searchbar';
-import { Text } from '@rneui/themed';
-import { useTheme } from '@rneui/themed';
+import { Text, SearchBar, useTheme } from '@rneui/themed';
+import { useNavigation } from '@react-navigation/native';
+import { customers } from '../mock/customer.json';
 
-export default () => {
+import React, { useState } from 'react';
+
+export default ({ clicked }) => {
   const { theme } = useTheme();
+  const navigation = useNavigation();
+  const [search, setSearch] = useState('');
+
+  const updateSearch = (search) => {
+    const customer = customers.filter(
+      (customer) => customer.firstName == search || customer.lastName == search
+    );
+    setSearch(customer);
+  };
+
   return (
     <View style={styles.contentView}>
       <Title text="Vos clients" />
-      <SearchBar />
+      <SearchBar
+        platform="default"
+        containerStyle={{
+          margin: 15,
+          alignSelf: 'center',
+          width: '50%',
+          backgroundColor: '#FFFFFF',
+          borderBottomColor: 'transparent',
+          borderTopColor: 'transparent',
+          shadowColor: '#969696',
+          shadowOffset: { width: 0, height: 0 },
+          shadowOpacity: 0.4,
+          shadowRadius: 10,
+          borderRadius: 15,
+        }}
+        inputContainerStyle={{
+          flexDirection: 'row',
+          width: '95%',
+          backgroundColor: '#FFFFFF',
+          borderRadius: 15,
+          alignItems: 'center',
+          shadowColor: '#969696',
+          shadowOffset: { width: 0, height: 0 },
+          shadowOpacity: 0.4,
+          shadowRadius: 10,
+        }}
+        inputStyle={{
+          fontSize: 20,
+          marginLeft: 10,
+          width: '90%',
+        }}
+        leftIconContainerStyle={{}}
+        rightIconContainerStyle={{}}
+        loadingProps={{}}
+        onChangeText={updateSearch}
+        onClearText={() => console.log(onClearText())}
+        placeholder=""
+        placeholderTextColor="#888"
+        cancelButtonTitle="Cancel"
+        cancelButtonProps={{}}
+        onCancel={() => console.log(onCancel())}
+        value={search}
+      />
+
       <ScrollView>
-        <LinearGradient
-          colors={[theme.colors.primary, theme.colors.primaryGradient]}
-          stop={{ x: 0.1, y: 0.01 }}
-          style={styles.card}
-        >
-          <Text style={styles.nameText}>Guillaume</Text>
-          <Text style={styles.nameText}>Charpentier</Text>
-          <Text style={styles.pointText}>116 Pts</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={[theme.colors.primary, theme.colors.primaryGradient]}
-          stop={{ x: 0.1, y: 0.01 }}
-          style={styles.card}
-        >
-          <Text style={styles.nameText}>Guillaume</Text>
-          <Text style={styles.nameText}>Charpentier</Text>
-          <Text style={styles.pointText}>116 Pts</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={[theme.colors.primary, theme.colors.primaryGradient]}
-          stop={{ x: 0.1, y: 0.01 }}
-          style={styles.card}
-        >
-          <Text style={styles.nameText}>Guillaume</Text>
-          <Text style={styles.nameText}>Charpentier</Text>
-          <Text style={styles.pointText}>116 Pts</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={[theme.colors.primary, theme.colors.primaryGradient]}
-          stop={{ x: 0.1, y: 0.01 }}
-          style={styles.card}
-        >
-          <Text style={styles.nameText}>Guillaume</Text>
-          <Text style={styles.nameText}>Charpentier</Text>
-          <Text style={styles.pointText}>116 Pts</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={[theme.colors.primary, theme.colors.primaryGradient]}
-          stop={{ x: 0.1, y: 0.01 }}
-          style={styles.card}
-        >
-          <Text style={styles.nameText}>Guillaume</Text>
-          <Text style={styles.nameText}>Charpentier</Text>
-          <Text style={styles.pointText}>116 Pts</Text>
-        </LinearGradient>
+        {search.length == 0 &&
+          customers.map((customer) => (
+            <Pressable
+              key={customer.id}
+              onPress={() => navigation.navigate('Customer', { params: { user: customer.id } })}
+            >
+              <LinearGradient
+                colors={[theme.colors.primary, theme.colors.primaryGradient]}
+                stop={{ x: 0.1, y: 0.01 }}
+                style={styles.card}
+              >
+                <Text style={styles.nameText}>{customer.firstName}</Text>
+                <Text style={styles.nameText}>{customer.lastName}</Text>
+                <Text style={styles.pointText}>{customer.points} Pts</Text>
+              </LinearGradient>
+            </Pressable>
+          ))}
+        {search.length > 0 &&
+          search.map((customer) => (
+            <Pressable
+              key={customer.id}
+              onPress={() => navigation.navigate('Customer', { params: { user: customer.id } })}
+            >
+              <LinearGradient
+                colors={[theme.colors.primary, theme.colors.primaryGradient]}
+                stop={{ x: 0.1, y: 0.01 }}
+                style={styles.card}
+              >
+                <Text style={styles.nameText}>{customer.firstName}</Text>
+                <Text style={styles.nameText}>{customer.lastName}</Text>
+                <Text style={styles.pointText}>{customer.points} Pts</Text>
+              </LinearGradient>
+            </Pressable>
+          ))}
       </ScrollView>
     </View>
   );
@@ -94,5 +138,10 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  container: {
+    alignSelf: 'center',
+    width: '50%',
+    backgroundColor: '#FFFFFF',
   },
 });

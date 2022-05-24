@@ -1,18 +1,20 @@
-import { View, StyleSheet, ScrollView, TouchableHighlight, Text } from 'react-native';
+import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import { useState } from 'react';
 import Title from './../container/title';
 import Modal from './../container/modal';
 import DeleteButton from './../components/DeleteButton';
 import PlusButton from './../components/PlusButton';
-import { useNavigation } from '@react-navigation/native';
+import { customers } from '../mock/customer.json';
 
-export default () => {
+export default ({ route }) => {
   const [count, setCount] = useState(0);
+  const customer = customers.find((customer) => customer.id === route.params.params.user);
+
   return (
     <View style={styles.contentView}>
-      <Title text="Guillaume" />
+      <Title text={customer.firstName} />
       <ScrollView style={styles.scrollView}>
-        <Modal style={styles.modalView} />
+        <Modal style={styles.modalView} customer={customer} />
         <View style={styles.logoView}>
           <DeleteButton style={styles.iconStyle} />
           <PlusButton style={styles.iconStyle} />

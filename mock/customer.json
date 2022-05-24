@@ -1,0 +1,49 @@
+{
+  "customers": [
+    {
+      "id": 0,
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "age": 31,
+      "birthDate": "09/09/1990",
+      "email": "toto@gmail.com",
+      "phoneNumber": "0612345678",
+      "points": "100",
+      "notes": "Prefere se faire coiffer par Murielle"
+    },
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": 31,
+      "birthDate": "09/09/1990",
+      "phoneNumber": "0612345678",
+      "email": "fdfs@fdfs.fr",
+      "points": "200",
+      "notes": "Prefere se faire coiffer par Géraldine"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "age": 31,
+      "birthDate": "09/09/1990",
+      "phoneNumber": "0612345678",
+      "email": "fdfds@fdfsd.fr",
+      "points": "300",
+      "notes": "Prefere se faire coiffer par Pierre"
+    }
+  ],
+  "credentials": [
+    {
+      "id": 0,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 0,
+      "username": "Admin",
+      "password": "admin"
+    }
+  ]
+}

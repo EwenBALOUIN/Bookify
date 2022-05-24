@@ -5,26 +5,34 @@ import IconFeather from 'react-native-vector-icons/Feather';
 import IconOcticons from 'react-native-vector-icons/Octicons';
 import { useTheme } from '@rneui/themed';
 
-export default () => {
+export default ({ customer }) => {
   const { theme } = useTheme();
   const styles = makeStyles(theme);
   return (
     <View style={styles.contentView}>
       <View style={styles.inputView}>
         <IconFeather name="users" size={24} style={styles.iconStyle} />
-        <Input placeholder="Name" secure={false} containerStyle={styles.input} />
+        <Input placeholder="Name" secure={false} containerStyle={styles.input}>
+          {customer.firstName} {customer.lastName}
+        </Input>
       </View>
       <View style={styles.inputView}>
         <IconFa name="calendar" size={24} style={styles.iconStyle} />
-        <Input placeholder="BirthDate" secure={false} containerStyle={styles.input} />
+        <Input placeholder="BirthDate" secure={false} containerStyle={styles.input}>
+          {customer.birthDate}
+        </Input>
       </View>
       <View style={styles.inputView}>
         <IconFeather name="smartphone" size={24} style={styles.iconStyle} />
-        <Input placeholder="PhoneNumber" secure={false} containerStyle={styles.input} />
+        <Input placeholder="PhoneNumber" secure={false} containerStyle={styles.input}>
+          {customer.phoneNumber}
+        </Input>
       </View>
       <View style={styles.inputView}>
         <IconOcticons name="note" size={24} style={styles.iconStyle} />
-        <Input placeholder="Notes" secure={false} containerStyle={styles.input} />
+        <Input placeholder="Notes" secure={false} containerStyle={styles.input}>
+          {customer.notes}
+        </Input>
       </View>
     </View>
   );
